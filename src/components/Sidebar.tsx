@@ -1,5 +1,8 @@
 import { gql, useQuery } from "@apollo/client";
+import { useParams } from "react-router-dom";
 import { Lesson } from "./Lesson";
+
+import cn from 'classnames'
 
 const GET_LESSONS_QUERY = gql`
   query {
@@ -24,10 +27,14 @@ interface GetLessonsQueryResponse {
 }
 
 export function Sidebar (): JSX.Element {
+  const { slug } = useParams<{ slug: string }>()
+
   const { data } = useQuery<GetLessonsQueryResponse>(GET_LESSONS_QUERY)
 
   return (
-    <aside className="hidden md:block w-[348px] bg-gray-700 p-6 border-l border-gray-600">
+    <aside className={cn('md:block md:w-[348px] bg-gray-700 p-6 border-l border-gray-600', {
+      hidden: slug
+    })}>
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">
         Cronograma de aulas
       </span>
