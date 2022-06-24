@@ -22,15 +22,16 @@ export function Subscribe (): JSX.Element {
   async function handleSubscribe (event: FormEvent) {
     event.preventDefault()
 
-
-    await createSubscriber({
-      variables: {
-        name, 
-        email
-      }
-    })
-
-    navigate('/event')
+    if (name !== '' || email !== '') {
+      await createSubscriber({
+        variables: {
+          name, 
+          email
+        }
+      })
+  
+      navigate('/event')
+    }
   }
 
   return (
