@@ -10,7 +10,7 @@ export function Sidebar (): JSX.Element {
   const { data } = useGetLessonsQuery()
 
   return (
-    <aside className={cn('md:block md:w-[348px] bg-gray-700 p-6 border-l border-gray-600', {
+    <aside className={cn('lg:block lg:w-[348px] bg-gray-700 p-6 border-l border-gray-600', {
       hidden: slug
     })}>
       <span className="font-bold text-2xl pb-6 mb-6 border-b border-gray-500 block">

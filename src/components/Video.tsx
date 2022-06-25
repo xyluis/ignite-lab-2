@@ -64,7 +64,7 @@ export function Video({ lessonSlug }: VideoProps): JSX.Element {
             )}
           </div>
 
-          <div className="hidden md:flex flex-col gap-4">
+          <div className="hidden lg:flex flex-col gap-4">
             <a href="#" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
               <DiscordLogo size={24}/>
               Comunidade do Discord
@@ -77,7 +77,7 @@ export function Video({ lessonSlug }: VideoProps): JSX.Element {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid md:grid-cols-2">
+        <div className="gap-8 mt-20 grid lg:grid-cols-2">
           <a href="#" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
             <div className="bg-green-700 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
@@ -88,7 +88,7 @@ export function Video({ lessonSlug }: VideoProps): JSX.Element {
                 Acesse o material complementar para acelerar o seu desenvolvimento
               </p>
             </div>
-            <div className="h-full p-6 hidden md:flex items-center">
+            <div className="h-full p-6 hidden lg:flex items-center">
               <CaretRight size={24} />
             </div>
           </a>
@@ -103,7 +103,7 @@ export function Video({ lessonSlug }: VideoProps): JSX.Element {
                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
               </p>
             </div>
-            <div className="h-full p-6 hidden md:flex items-center">
+            <div className="h-full p-6 hidden lg:flex items-center">
               <CaretRight size={24} />
             </div>
           </a>

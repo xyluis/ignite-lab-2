@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 
+import codeMockup from '../assets/code-mockup.png'
+
 export function Subscribe (): JSX.Element {
   const navigate = useNavigate()
 
@@ -28,20 +30,20 @@ export function Subscribe (): JSX.Element {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat bg-center flex flex-col items-center">
-      <div className="w-full md:max-w-[1100px] flex md:flex-row flex-col items-center md:justify-between md:gap-0 gap-8 mt-20 mx-auto">
-        <div className="md:max-w-[640px] max-w-[320px] flex flex-col md:items-start items-center md:text-start  text-center gap-2">
+      <div className="w-full lg:max-w-[1100px] flex lg:flex-row flex-col items-center lg:justify-between lg:gap-0 gap-8 mt-20 mx-auto">
+        <div className="lg:max-w-[640px] max-w-[320px] flex flex-col lg:items-start items-center lg:text-start  text-center gap-2">
           <Logo />
 
-          <h1 className="mt-8 md:text-[2.5rem] text-[1.8rem] leading-tight">
+          <h1 className="mt-8 lg:text-[2.5rem] text-[1.8rem] leading-tight">
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com <strong className="text-blue-500">React</strong>
           </h1>
 
-          <p className="text-gray-200 leading-tight md:text-base text-[0.8rem]">
+          <p className="text-gray-200 leading-tight lg:text-base text-[0.8rem]">
             Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
           </p>
         </div>
 
-        <div className="w-full p-8 bg-gray-700 border-t border-b md:border md:w-auto border-gray-500 rounded">
+        <div className="w-full p-8 bg-gray-700 border-t border-b lg:border lg:w-auto border-gray-500 rounded">
           <strong className="text-2xl mb-6 block">Increva-se gratuitamente</strong>
           
           <form action="" className="flex flex-col gap-2 w-full" onSubmit={handleSubscribe}>
@@ -69,7 +71,7 @@ export function Subscribe (): JSX.Element {
         </div>
       </div>
 
-      <img src="/src/assets/code-mockup.png" draggable={false} className="mt-10" alt="Code Mockup" />
+      <img src={codeMockup} draggable={false} className="mt-10" alt="Code Mockup" />
     </div>
   )
 }
